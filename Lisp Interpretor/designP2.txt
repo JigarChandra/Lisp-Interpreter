@@ -1,0 +1,41 @@
+..........................................................................................................................................................................................
+PART 2 
+..........................................................................................................................................................................................
+The SExpression class is same as the first part, except that it now also includes all the primitive 
+functions like CAR, CDR, CONS, ATOM, NULL, INTEGER, PLUS, MINUS, TIMES, QUOTIENT, REMAINDER, LESS AND GREATER.
+
+I have implemented one additional class in part 2, called the 'Evaluate' class, the behaviour of which is described below:
+
+Evaluate class:
+==================
+The functions EVLIS, EVCON, EVAL and APPLY are implemented in the same way as given in the Professor's slides.
+Additional functions:
+
+a) evalArgs():
+===================
+Checks for legal arguments.
+i) constants (integers, T and NIL)
+ii) List format 
+
+b) Length():
+============
+Returns the length of the s-expression passed as an argument to this function. 
+It is used for checking whether the number of arguments for a function call is equal to the number of parameters the called function expects. 
+(For both user-defined and built-in functions)
+
+c) addPairs():
+==============
+Adds bindings (between parameters and arguments passed to it as arguments) to the Association List.
+
+d) addDefinition():
+===================
+This function adds a function definition passed to it as an argument to the Definition List.
+
+e) in():
+========
+This function checks whether the function is present in the Definition List or not. If function is not found,
+ it will give an error stating that the corresponding function has not been defined.
+
+f) getVal():
+============
+This function returns the values of parameters passed to it as argument by searching in the bindings present in the Association List.
